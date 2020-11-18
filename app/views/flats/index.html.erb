@@ -1,0 +1,33 @@
+<h1>All our flats (<%= @flats.count %>)</h1>
+
+<div class="container">
+    <% @flats.each do |flat| %>
+    <div class="flat-card">
+        <h3><%= flat.name %></h3>
+        <h5><%= flat.address %></h5>
+        <div class="icons">
+          <p><i class="fas fa-euro-sign"></i><%= flat.price_per_night %></p>
+          <p><i class="fas fa-user-friends"></i><%= flat.number_of_guests %></p>
+        </div>
+        <div class="actions">
+          <div class="action">
+            <%= link_to "More details", flat_path(flat) %>
+          </div>
+          <div class="action">
+             <%= link_to "Edit", edit_flat_path(flat) %>
+          </div>
+          <div class="action">
+            <%= link_to "Delete",
+            flat_path(flat),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+          </div>
+        </div>
+    </div>
+    <% end %>
+</div>
+
+<%= link_to "Add a new flat", new_flat_path %>
+
+
+

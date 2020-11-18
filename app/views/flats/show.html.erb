@@ -1,0 +1,53 @@
+<%= link_to "Search", flats_path %>
+<%= link_to "Edit", edit_flat_path %>
+<%= link_to "Delete",
+flat_path(@flat),
+method: :delete,
+data: { confirm: "Are you sure?" } %>
+
+<div class="name_and_address">
+  <h2><%= @flat.name %></h2>
+  <p><%= @flat.address %></p>
+</div>
+
+<div class="description">
+  <h3>A bit more about this flat...</h3>
+  <p><%= @flat.description %></p>
+</div>
+
+<div class="book">
+  <h3>Book this place!</h3>
+  <form action="">
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">From:</span>
+      <input type="text" class="form-control" placeholder="12/10/2020" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mt-2">
+      <span class="input-group-addon" id="basic-addon1">To:</span>
+      <input type="text" class="form-control" placeholder="18/10/2020" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+  </form>
+
+</div>
+
+<div class="details">
+  <h3>Details</h3>
+  <p>
+    <%= @flat.number_of_guests %>
+    <i class="fas fa-user-friends"></i>
+  </p>
+  <p>
+    <%= @flat.price_per_night %>
+    <i class="fas fa-euro-sign"></i>
+  </p>
+</div>
+
+<div class="share">
+  <h4>Share</h4>
+  <i class="fab fa-facebook-square"></i>
+  <i class="fab fa-twitter-square"></i>
+  <i class="fab fa-pinterest-square"></i>
+  <i class="fas fa-envelope-square"></i>
+</div>
+

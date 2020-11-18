@@ -1,0 +1,33 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flat-card {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  width: 200px;
+}
+
+.icons {
+  display: flex;
+}
+
+p {
+  padding:10px;
+}
+
+.actions {
+   display: flex;
+}
+
+.action {
+  padding: 15px;
+
+}
